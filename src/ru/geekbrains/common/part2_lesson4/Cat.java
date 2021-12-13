@@ -14,9 +14,9 @@ public class Cat {
     }
 
     public boolean eat (Plate plate) {
-
         if (plate.decreaseFood(APPETITE)){
-            System.out.println("Cat " + name + " not eat = ");
+            System.out.println("Cat " + name + " eat = ");
+            satiety = true;
             return true;
         } else {
             System.out.println("Cat " + name + " not eat = ");
@@ -26,7 +26,17 @@ public class Cat {
 
     public String getName (){ return name; }
 
-    public void fear (Dog dog){
-        System.out.println("Cat = " + name + "fear dog " + );
+//    public void fear (Dog dog){
+//        System.out.println("Cat = " + name + "fear dog " + dog.getName());
+//    }
+
+    public boolean isSatiety() { return satiety; }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", satiety=" + satiety +
+                '}';
     }
 }

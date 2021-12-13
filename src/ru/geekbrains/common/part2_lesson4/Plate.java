@@ -8,7 +8,7 @@ public class Plate {
     }
 
     public boolean decreaseFood(int amount){
-        if(food <= amount){
+        if(food >= amount){
             food -= amount;
             return true;
         } else {
